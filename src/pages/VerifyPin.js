@@ -23,12 +23,14 @@ export default function VerifyPin() {
       <form onSubmit={handle}>
         <h2>Application Registration PIN</h2>
         <p>
-          Apply for a 5-digit registration PIN at a cost of R300. Benefits:…<br/>
+          Apply for a 5-digit registration PIN at a cost of R300. <br/>
           OLYMPIC PLATFORM BANKING DETAILS:<br/>
           Beneficiary Name: MAMA PTY<br/>
           Account Number: 62509963139<br/>
           Reference: 0736262222<br/>
           Bank: FNB (250655)<br/>
+          Note: Always include "0736262222" as the reference number when making payment, 
+          your payment won't be processed, if you fail to add the reference number.<br/>
           Send receipt via WhatsApp to +1 405 926 0437 or +44 739 887 1333.
         </p>
         <input

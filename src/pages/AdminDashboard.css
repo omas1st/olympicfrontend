@@ -1,30 +1,72 @@
 .admindash-page {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-  }
-  .admindash-page h2 {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  .admindash-page input {
-    margin-right: 5px;
-    padding: 6px;
-  }
-  .admindash-page button {
-    margin: 0 5px 5px 0;
-    padding: 6px 10px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admindash-page h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.admindash-page input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-right: 1rem;
+    width: 300px;
+}
+
+.admindash-page button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-  }
-  .admindash-page table {
+    transition: background 0.3s ease;
+}
+
+.admindash-page button:hover {
+    background: #2980b9;
+}
+
+.admindash-page table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-  }
-  .admindash-page th,
-  .admindash-page td {
-    padding: 8px;
+    margin-top: 2rem;
+}
+
+.admindash-page th,
+.admindash-page td {
+    padding: 12px;
     text-align: left;
-    border: 1px solid #ddd;
-  }
-  
+    border-bottom: 1px solid #eee;
+}
+
+.admindash-page th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.admindash-page tr:hover {
+    background: #f8f9fa;
+}
+
+.admindash-page td button {
+    margin-right: 0.5rem;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.admindash-page td button:nth-child(1) { background: #27ae60; }
+.admindash-page td button:nth-child(2) { background: #f1c40f; }
+.admindash-page td button:nth-child(3) { background: #e67e22; }
+
+.admindash-page td button:hover {
+    opacity: 0.9;
+}
