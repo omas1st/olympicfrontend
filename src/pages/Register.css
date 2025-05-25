@@ -1,0 +1,33 @@
+.register-page {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .register-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .register-page form > div {
+    margin-bottom: 15px;
+  }
+  .register-page label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .register-page input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .register-page button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .register-page p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  

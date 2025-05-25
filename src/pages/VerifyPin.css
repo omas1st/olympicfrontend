@@ -1,0 +1,32 @@
+.verifypin-page {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .verifypin-page h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .verifypin-page p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+  .verifypin-page input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .verifypin-page button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .verifypin-page .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  

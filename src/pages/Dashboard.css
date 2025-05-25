@@ -1,0 +1,13 @@
+.dashboard-page {
+    max-width: 400px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  .dashboard-page h2 {
+    margin-bottom: 20px;
+  }
+  .dashboard-page button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  

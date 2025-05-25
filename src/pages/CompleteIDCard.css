@@ -1,0 +1,21 @@
+.completeid-page {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .completeid-page h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .completeid-page p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .completeid-page button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

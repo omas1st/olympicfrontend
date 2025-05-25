@@ -1,0 +1,29 @@
+.selectplan-page {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .selectplan-page h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .selectplan-page select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  .selectplan-page section {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+  }
+  .selectplan-page button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
