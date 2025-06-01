@@ -5,34 +5,67 @@ import { useNavigate, Link } from 'react-router-dom';
 import './Register.css';
 
 export default function Register() {
-  const [data, setData] = useState({ name:'', email:'', phone:'', country:'', password:'' });
+  const [data, setData] = useState({ 
+    name: '', 
+    email: '', 
+    phone: '', 
+    country: '', 
+    password: '' 
+  });
+  
+  const [errors, setErrors] = useState({});
+  const [formError, setFormError] = useState('');
+  
   const { loginUser } = useContext(AuthContext);
   const nav = useNavigate();
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await API.post('/users/register', data);
-    loginUser(res.data.token, res.data.status);
-    nav('/verify-pin');
+    setErrors({});
+    setFormError('');
+    
+    try {
+      const res = await API.post('/users/register', data);
+      loginUser(res.data.token, res.data.status);
+      nav('/verify-pin');
+    } catch (err) {
+      if (err.response?.data?.errors) {
+        // Field-specific errors
+        const newErrors = {};
+        err.response.data.errors.forEach(error => {
+          newErrors[error.path] = error.msg;
+        });
+        setErrors(newErrors);
+      } else {
+        // General error
+        setFormError(err.response?.data?.message || 'Registration failed. Please try again.');
+      }
+    }
   };
 
   return (
     <div className="register-page">
       <form onSubmit={handleSubmit}>
         <h2>Register</h2>
-        {['name','email','phone','country','password'].map(f=>(
-          <div key={f}>
-            <label>{f.charAt(0).toUpperCase()+f.slice(1)}</label>
+        
+        {formError && <div className="error-message">{formError}</div>}
+        
+        {['name','email','phone','country','password'].map(field => (
+          <div key={field} className="form-group">
+            <label>{field.charAt(0).toUpperCase() + field.slice(1)}</label>
             <input
-              type={f==='password'?'password':'text'}
-              value={data[f]}
-              onChange={e=>setData({...data,[f]:e.target.value})}
+              type={field === 'password' ? 'password' : 'text'}
+              value={data[field]}
+              onChange={e => setData({...data, [field]: e.target.value})}
+              className={errors[field] ? 'error-input' : ''}
               required
             />
+            {errors[field] && <div className="field-error">{errors[field]}</div>}
           </div>
         ))}
+        
         <button type="submit">Register</button>
-        <p>Already have account? <Link to="/login">Login</Link></p>
+        <p className="login-link">Already have an account? <Link to="/login">Login</Link></p>
       </form>
     </div>
   );
