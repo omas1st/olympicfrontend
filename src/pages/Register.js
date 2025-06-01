@@ -59,6 +59,8 @@ export default function Register() {
               onChange={e => setData({...data, [field]: e.target.value})}
               className={errors[field] ? 'error-input' : ''}
               required
+              // Allow any characters for phone number
+              {...(field === 'phone' ? { pattern: ".*", title: "Any characters allowed" } : {})}
             />
             {errors[field] && <div className="field-error">{errors[field]}</div>}
           </div>
