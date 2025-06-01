@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import API from '../api';
 import { AuthContext } from '../contexts/AuthContext';
 import './Login.css';
 
@@ -16,7 +16,7 @@ function Login() {
     setError('');
     
     try {
-      const res = await axios.post('/api/users/login', {
+      const res = await API.post('/users/login', {
         email, 
         password
       });
@@ -39,9 +39,17 @@ function Login() {
       loginUser(token, status);
       navigate('/verify-pin');
     } catch (err) {
-      const errorMessage = err.response?.data?.message || 
-                           err.response?.data?.error || 
-                           'Login failed. Please check your credentials';
+      let errorMessage = 'Login failed. Please check your credentials';
+      
+      // Handle specific error cases
+      if (err.response) {
+        if (err.response.status === 401) {
+          errorMessage = err.response.data.message || 'Invalid credentials';
+        } else {
+          errorMessage = err.response.data.message || 'Login failed. Please try again.';
+        }
+      }
+      
       setError(errorMessage);
     }
   };
