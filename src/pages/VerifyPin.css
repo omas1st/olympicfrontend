@@ -1,51 +1,109 @@
 .verifypin-page {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.verifypin-page form {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .verifypin-page h2 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
 }
 
-.verifypin-page p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 6px;
+.instruction-section, 
+.banking-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 4px solid #3498db;
+}
+
+.banking-section {
+  border-left-color: #e74c3c;
+}
+
+.instruction-section h3, 
+.banking-section h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.instruction-section ol, 
+.banking-section ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.instruction-section li, 
+.banking-section li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.banking-section .note {
+  background-color: #fffde7;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin: 15px 0 0;
+}
+
+.pin-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .verifypin-page input {
-    width: 200px;
-    margin: 0 auto;
-    padding: 12px;
-    font-size: 18px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    display: block;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 3px;
+  transition: border-color 0.3s;
+}
+
+.verifypin-page input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
 .verifypin-page button {
-    display: block;
-    margin: 1.5rem auto 0;
-    padding: 12px 30px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .verifypin-page button:hover {
-    background: #2980b9;
+  background-color: #2980b9;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
 }
