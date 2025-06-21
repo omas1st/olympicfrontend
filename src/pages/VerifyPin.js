@@ -32,6 +32,7 @@ export default function VerifyPin() {
           <ol>
             <li><strong>Registration Fee:</strong> Pay R300 to complete your registration</li>
             <li><strong>PIN Delivery:</strong> A 5-digit PIN will be sent via WhatsApp and email after registration</li>
+            <li><strong>Information:</strong> If you're using CAPITEC BANK, use STORE or ATM deposit for the payment. Transfer is not allowed for CAPITEC Users only.</li> 
             <li><strong>Enter Your PIN:</strong> Input the 5-digit PIN below and click "Enter" to proceed</li>
           </ol>
         </div>
