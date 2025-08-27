@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,  // now points to https://olympicplatform.vercel.app/api
+  baseURL: process.env.REACT_APP_API_URL,  // now points to https://olympicbackend.vercel.app/api
 });
 
 // Attach JWT: prefer adminToken for admin routes, otherwise use user token
